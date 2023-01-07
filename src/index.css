@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  background-color: #fd5294;
+}
+
+.header-container {
+  background-color: #c94075;
+  height: 30px;
+  display: flex;
+  color: #fff;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.header-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+}
+
+.countries-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-title {
+  color: #fff;
+  padding: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.home-mid-container {
+  display: flex;
+  background-color: #dd4883;
+}
+
+.search-input {
+  margin: 5px;
+  padding: 5px;
+  background-color: #fa669fc9;
+  border: none;
+  color: #fff;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: #fff;
+}
+
+.country-container {
+  width: 50%;
+  display: flex;
+  background-color: #cf4278;
+  height: 100px;
+  gap: 12px;
+  padding: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.arrow-button {
+  position: absolute;
+  height: 20px;
+  top: 10px;
+  right: 5px;
+}
+
+.country-flag {
+  height: 50px;
+  transform: rotate(-45deg);
+  translate: 0 10px;
+  filter: grayscale();
+  opacity: 0.5;
+}
+
+.color {
+  filter: grayscale(0);
+  transform: rotate(0);
+  opacity: 1;
+}
+
+.country-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.country-title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.country-temperature {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.fullwidth {
+  width: 100%;
+  justify-content: center;
+  height: 150px;
+}
+
+.fullwidth .country-title {
+  font-size: 22px;
+}
+
+.fullwidth .country-flag {
+  height: 100px;
+}
+
+.country-container:hover > .country-flag {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.loader-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -23px;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  align-items: center;
+}
+
+.detail-country-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-country-title {
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.detail-country-temperature {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.detail-text {
+  z-index: 99;
+}
+
+.weather-icon {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 30px;
+  right: -50px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.day-container {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background-color: #dd4883;
+}
+
+.home-list-container > li:nth-child(even) {
+  background-color: #cf4278;
+}
+
+.background-light {
+  background-color: #dd4883;
+}
+
+.background-dark {
+  background-color: #cf4278;
+}
+
+.background-main {
+  background-color: #fc5193;
+}
+
+.dot-wave {
+  --uib-size: 47px;
+  --uib-speed: 1s;
+  --uib-color: rgba(0, 0, 0, 0.65);
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--uib-size);
+  height: calc(var(--uib-size) * 0.17);
+  padding-top: calc(var(--uib-size) * 0.34);
+}
+
+.dot-wave__dot {
+  flex-shrink: 0;
+  width: calc(var(--uib-size) * 0.17);
+  height: calc(var(--uib-size) * 0.17);
+  border-radius: 50%;
+  background-color: var(--uib-color);
+  will-change: transform;
+}
+
+.dot-wave__dot:nth-child(1) {
+  animation:
+    jump var(--uib-speed) ease-in-out
+    calc(var(--uib-speed) * -0.45) infinite;
+}
+
+.dot-wave__dot:nth-child(2) {
+  animation:
+    jump var(--uib-speed) ease-in-out
+    calc(var(--uib-speed) * -0.3) infinite;
+}
+
+.dot-wave__dot:nth-child(3) {
+  animation:
+    jump var(--uib-speed) ease-in-out
+    calc(var(--uib-speed) * -0.15) infinite;
+}
+
+.dot-wave__dot:nth-child(4) {
+  animation: jump var(--uib-speed) ease-in-out infinite;
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-200%);
+  }
+}
