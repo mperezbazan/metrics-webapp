@@ -6,7 +6,7 @@ const Navbar = () => (
       <div className="header-list">
         <li className="header-item">
           <Link to="/">
-            <i className="fa-sharp fa-solid fa-house" />
+            {'<'}
           </Link>
         </li>
         <li className="header-item">
