@@ -84,6 +84,14 @@ body {
   padding: 12px;
   overflow: hidden;
   cursor: pointer;
+  position: relative;
+}
+
+.arrow-button {
+  position: absolute;
+  height: 20px;
+  top: 10px;
+  right: 5px;
 }
 
 .country-flag {
