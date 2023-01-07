@@ -7,6 +7,7 @@ const GET_WEATHER_FULFILLED = 'weatherapp/country/GET/fulfilled';
 export default function reducer(state = [], action) {
   switch (action.type) {
     case GET_WEATHER_FULFILLED:
+      console.log(action.payload);
       return [...action.payload];
     default:
       return state;
