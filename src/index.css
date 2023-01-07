@@ -1,5 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: #fd5294;
+}
+
+.countries-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-title {
+  color: #fff;
+  padding: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.country-container {
+  width: 50%;
+  display: flex;
+  background-color: #fd5294;
+  height: 100px;
+  gap: 12px;
+  padding: 12px;
+  overflow: hidden;
+  border: 2px solid #c94075;
+}
+
+.country-flag {
+  height: 50px;
+  transform: rotate(-45deg);
+  translate: 0 10px;
+  filter: grayscale();
+  opacity: 0.5;
+}
+
+.country-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.country-title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.country-temperature {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.fullwidth {
+  width: 100%;
+  justify-content: center;
+  height: 150px;
+}
+
+.fullwidth .country-title {
+  font-size: 22px;
+}
+
+.fullwidth .country-flag {
+  height: 100px;
 }
