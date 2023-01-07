@@ -7,7 +7,7 @@ const getAll = async () => {
     countries.map(async (country) => {
       const lat = country.latitude;
       const lon = country.longitude;
-      const res = await http.get(`forecast?current_weather=true&latitude=${lat}&longitude=${lon}&hourly=temperature_2m,relativehumidity_2m,precipitation,rain&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=CST`);
+      const res = await http.get(`forecast?current_weather=true&latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=CST`);
       const newData = { ...country, data: res.data };
       return newData;
     }),

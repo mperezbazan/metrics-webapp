@@ -7,6 +7,11 @@
   font-family: 'Lato', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 body {
   background-color: #fd5294;
 }
@@ -140,8 +145,74 @@ body {
   translate: -23px;
 }
 
+.detail-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  align-items: center;
+}
+
+.detail-country-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-country-title {
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.detail-country-temperature {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.detail-text {
+  z-index: 99;
+}
+
+.weather-icon {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 30px;
+  right: -50px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.day-container {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background-color: #dd4883;
+}
+
+.home-list-container > li:nth-child(even) {
+  background-color: #cf4278;
+}
+
 .background-light {
   background-color: #dd4883;
+}
+
+.background-dark {
+  background-color: #cf4278;
 }
 
 .background-main {

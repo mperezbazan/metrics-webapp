@@ -3,10 +3,9 @@ import { useSelector } from 'react-redux';
 import { getWeatherAPI } from '../redux/Country/Country';
 import Country from './Country';
 import Loading from './Loading';
-import Navbar from './Navbar';
 
 const CountryList = () => {
-  const [mainCountry, setMainCountry] = useState();
+  const [mainCountry, setMainCountry] = useState(Math.floor(Math.random() * 243));
   const [filteredCountries, setFilteredCountries] = useState([]);
   const countries = useSelector((state) => state.countries);
   useEffect(() => {
@@ -26,7 +25,6 @@ const CountryList = () => {
   return (
     <>
       <div>
-        <Navbar />
         {
         countries.length === 0
           ? <Loading />

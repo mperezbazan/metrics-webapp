@@ -1,9 +1,13 @@
+import { Link } from 'react-router-dom';
+
 const Navbar = () => (
   <header className="header-container">
     <nav className="header-nav">
       <div className="header-list">
         <li className="header-item">
-          {'<'}
+          <Link to="/">
+            <i className="fa-sharp fa-solid fa-house" />
+          </Link>
         </li>
         <li className="header-item">
           Country views
