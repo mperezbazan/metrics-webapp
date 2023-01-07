@@ -32,16 +32,20 @@ const CountryList = () => {
           ? <Loading />
           : (
             <>
-              <Country item={countries[mainCountry]} fullwidth color />
+              <Country item={countries[mainCountry]} fullwidth color main />
               <div className="home-mid-container">
                 <p className="home-title">WEATHER BY COUNTRY</p>
                 <input type="text" onChange={handleChange} className="search-input" placeholder="Search by country" />
               </div>
               <div className="countries-container">
                 {
-                  filteredCountries.map((country) => (
-                    <Country key={country.alpha3} item={country} />
-                  ))
+                  filteredCountries.map((country, index) => {
+                    let background = false;
+                    if ((index + 1) % 4 === 0 || (index + 4) % 4 === 0 || index === 0) {
+                      background = true;
+                    }
+                    return <Country key={country.alpha3} item={country} background={background} />;
+                  })
                 }
               </div>
             </>

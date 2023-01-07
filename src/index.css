@@ -49,16 +49,18 @@ body {
   font-weight: 800;
   letter-spacing: 1px;
   font-size: 12px;
+  width: 100%;
 }
 
 .home-mid-container {
   display: flex;
+  background-color: #dd4883;
 }
 
 .search-input {
   margin: 5px;
   padding: 5px;
-  background-color: #c9407471;
+  background-color: #fa669fc9;
   border: none;
   color: #fff;
   width: 100%;
@@ -71,12 +73,11 @@ body {
 .country-container {
   width: 50%;
   display: flex;
-  background-color: #fd5294;
+  background-color: #cf4278;
   height: 100px;
   gap: 12px;
   padding: 12px;
   overflow: hidden;
-  border: 2px solid #c94075;
   cursor: pointer;
 }
 
@@ -137,6 +138,14 @@ body {
   top: 50%;
   left: 50%;
   translate: -23px;
+}
+
+.background-light {
+  background-color: #dd4883;
+}
+
+.background-main {
+  background-color: #fc5193;
 }
 
 .dot-wave {
