@@ -12,8 +12,10 @@ const CountryList = () => {
   useEffect(() => {
     setMainCountry(Math.floor(Math.random() * 243));
     getWeatherAPI();
-    setFilteredCountries(countries);
   }, []);
+  useEffect(() => {
+    setFilteredCountries(countries);
+  }, [countries]);
   const handleChange = (e) => {
     const search = e.target.value;
     const newCountries = [...countries];
@@ -30,7 +32,7 @@ const CountryList = () => {
           ? <Loading />
           : (
             <>
-              <Country item={countries[mainCountry]} fullwidth />
+              <Country item={countries[mainCountry]} fullwidth color />
               <div className="home-mid-container">
                 <p className="home-title">WEATHER BY COUNTRY</p>
                 <input type="text" onChange={handleChange} className="search-input" placeholder="Search by country" />
